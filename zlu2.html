@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="./css/base.css">
+	<link rel="stylesheet" href="./css/bootstrap.css">
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		 ul li{
+			float: left;
+			list-style: none;
+			margin-left: 30px;
+			margin-bottom: 30px;
+		}
+		
+	</style>
+</head>
+<body>
+	<div id="app">
+	        <div>
+                <ul>
+                    <li v-for="(item, index) in menuList" :class="active == index?'active':''">
+                        <a href="javascript:;" @click="setMenu(index)">{{item.name}}</a>
+                    </li>
+                </ul>
+            </div>
+             <div style="width: 30px;height: 30px;">
+             
+             </div>
+              <router-view>
+              </router-view>
+	</div>
+	
+	
+<script src="./js/jquery-3.2.1.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/vue.js"></script>
+<script src="./js/vue-route.js"></script>
+<script src="./zlu2.js"></script>
+</body>
+</html>
